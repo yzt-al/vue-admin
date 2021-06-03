@@ -6,28 +6,29 @@ import Register from '../views/register.vue'
 
 Vue.use(VueRouter)
 
-const routes = [
-  {
-    path: '/home',
-    name: 'home',
-    component:Home
-  },
-  {
-    path: '/login',
-    name: 'login',
-    component: () => import(/* webpackChunkName: "login" */ '../views/login.vue')
-  },
-  {
-    path: '/register',
-    name: 'register',
-    component: () => import(/* webpackChunkName: "register" */ '../views/register.vue')
-  }
+const routes = [{
+        path: '/home',
+        name: 'home',
+        component: Home
+    },
+    {
+        path: '/login',
+        name: 'login',
+        component: () =>
+            import ( /* webpackChunkName: "login" */ '../views/login.vue')
+    },
+    {
+        path: '/register',
+        name: 'register',
+        component: () =>
+            import ( /* webpackChunkName: "register" */ '../views/register.vue')
+    }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes
 })
 
 export default router
