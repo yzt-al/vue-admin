@@ -21,5 +21,8 @@ export default {
     font-size:20px;
     margin-bottom:20px;
     letter-spacing: 10px;
+    &:hover{
+      color:red
+    }
   }
 </style>
