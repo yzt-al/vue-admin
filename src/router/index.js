@@ -3,10 +3,16 @@ import VueRouter from 'vue-router'
 import Home from '../views/home.vue'
 import Login from '../views/login.vue'
 import Register from '../views/register.vue'
+import Upload from '../views/upload.vue'
 
 Vue.use(VueRouter)
 
-const routes = [{
+const routes = [
+    {
+        path: '/',
+        redirect: "/home"
+    },
+    {
         path: '/home',
         name: 'home',
         component: Home
@@ -14,14 +20,23 @@ const routes = [{
     {
         path: '/login',
         name: 'login',
-        component: () =>
-            import ( /* webpackChunkName: "login" */ '../views/login.vue')
+        component:Login
+        // component: () =>
+        //     import ( /* webpackChunkName: "login" */ '../views/login.vue')
     },
     {
         path: '/register',
         name: 'register',
-        component: () =>
-            import ( /* webpackChunkName: "register" */ '../views/register.vue')
+        component:Register
+        // component: () =>
+        //     import ( /* webpackChunkName: "register" */ '../views/register.vue')
+    },
+    {
+        path: '/upload',
+        name: 'upload',
+        component:Upload
+        // component: () =>
+        //     import ( /* webpackChunkName: "register" */ '../views/register.vue')
     }
 ]
 

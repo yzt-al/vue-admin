@@ -1,6 +1,6 @@
 <template>
   <div>
-      这是home页面
+       <el-button type="primary" @click="upload">上传文件</el-button>
   </div>
 </template>
 
@@ -10,6 +10,11 @@ export default {
     data(){
         return{
 
+        }
+    },
+    methods:{
+        upload(){
+            this.$router.push('/upload')
         }
     }
 }
