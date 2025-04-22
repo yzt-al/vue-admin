@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/home.vue'
+import Home from '../views/Home.vue'
 import Login from '../views/login.vue'
 import Register from '../views/register.vue'
 import Upload from '../views/upload.vue'
@@ -41,7 +41,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-    mode: 'history',
+    mode: 'hash',
     base: process.env.BASE_URL,
     routes
 })
