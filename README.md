@@ -1,5 +1,5 @@
 
-1,项目文件介绍222：
+1,项目文件介绍：
 api:封装请求API
 components:组件封装
 router:路由
